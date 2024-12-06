@@ -5,7 +5,7 @@ public class MessageResponse {
     public String getMessage() {
         return message;
     }
-    public void setMessage() {
-        this.message = "im tired of this fckng sht";
+    public void setMessage(String message) {
+        this.message = message;
     }    
 }

@@ -27,7 +27,7 @@ public class EchoController {
         entity.setMessage("bibaboba");
         repository.save(entity);
         final MessageResponse messageResponse = new MessageResponse();
-        messageResponse.setMessage();
+        messageResponse.setMessage("aaasfasfasf");
         return ResponseEntity.ok(messageResponse);
     }
 }
