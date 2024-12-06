@@ -1,8 +1,8 @@
-import SimpleForm from './components/SimpleForm';
+import RegistrationForm from "./components/RegistrationForm";
 
 function App() {
   return (
-    <SimpleForm />
+    <RegistrationForm />
   );
 }
 

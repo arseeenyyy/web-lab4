@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.github.arseeenyyy.models.entities.MessageEntity;
 import com.github.arseeenyyy.models.entities.UserEntity;
 import com.github.arseeenyyy.models.request.UserRequest;
 import com.github.arseeenyyy.models.response.MessageResponse;
