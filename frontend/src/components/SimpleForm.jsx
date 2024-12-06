@@ -19,6 +19,7 @@ function SimpleForm() {
         const requestData = {
             name: formData.name,
         }; 
+        console.log("sending request: " + requestData);
         try {
             const response = await fetch("http://localhost:8080/web4/echo", {
                 method: "POST", 
