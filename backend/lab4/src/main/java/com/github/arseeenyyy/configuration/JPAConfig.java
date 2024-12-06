@@ -1,5 +1,8 @@
 package com.github.arseeenyyy.configuration;
 
+import java.io.IOException;
+import java.util.Properties;
+
 import javax.sql.DataSource;
 
 import org.springframework.context.annotation.Bean;
@@ -20,12 +23,15 @@ public class JPAConfig {
     
     @Bean
     public DataSource dataSource() {
-        // Настройка подключения к PostgreSQL
+        final Properties info = new Properties();
+        try {
+            info.load(this.getClass().getResourceAsStream("/db.cfg"));
+        } catch (IOException exception) {}
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
         dataSource.setUrl("jdbc:postgresql://localhost:5432/studs");
-        dataSource.setUsername("s413052");
-        dataSource.setPassword("IIPA&7624");
+        dataSource.setUsername(info.getProperty("user"));
+        dataSource.setPassword(info.getProperty("password"));
         return dataSource;
     }
     
